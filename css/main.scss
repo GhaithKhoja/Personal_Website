@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
 
 body, html {
 
     background: #0A0613;
     background-image: url("../images/Group 4.png");
+    // Fixed or scroll better?
+    background-attachment: fixed;
     margin: 0;
     font-family: 'Space Mono', monospace;
     scroll-behavior: smooth;
@@ -347,9 +350,32 @@ nav {
 .contact {
     color: white;
     background: rgba(10, 6, 19, 0.7);
+    padding: 2em;
+    user-select: none;
+    margin-bottom: 10em;
 
-    .contact-text, .lnkdn {
-        user-select: none;
+    .contact-text {
+        font-size: 7em;
+        text-align: center;
+    }
+    ul {
+        span:hover {
+            cursor: pointer;
+            font-weight: bold;
+        }
+        display: block;
+        text-align: center;
+        justify-content: space-between;
+        list-style-type: none;
+        li {
+            margin-top: 2em;
+            font-size: 4em;
+
+        }
+    }
+
+    .email-text {
+        font-family: 'Archivo', sans-serif;
     }
 
     a {
@@ -357,20 +383,6 @@ nav {
         color:white;
     }
 
-    h1 {
-        font-size: 3.2em;
-    }
-
-    ul {
-        font-family: Arial, Helvetica, sans-serif;
-        margin-top: -6em;
-        list-style-type: none;
-        text-align: center;
-        li {
-            padding: 2.5em;
-            font-size: 2.7em;
-        }
-    }
 }
 
 

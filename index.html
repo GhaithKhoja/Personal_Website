@@ -112,15 +112,29 @@
     </section>
 
     <section class="contact">
-        <h1 class="contact-text">Contact:</h1>
+        <h1 class="contact-text">Contact</h1>
         <ul>
             <li>
-                <a class="lnkdn" id="contact-section" href="https://www.linkedin.com/in/ghaith-khoja/"><span>Linkedin</span></a>
+                <a title="Click to Go to Linkedin" class="lnkdn" id="contact-section" href="https://www.linkedin.com/in/ghaith-khoja/"><span>Linkedin</span></a>
             </li>
-            <li>Email: gkhoja@umich.edu</li>
-            <li>Phone: 206-849-4905</li>
+            <li> 
+                <a title="Click to Copy to Clipboard" class="email-text" id="email" href="#" onclick="CopyToClipboard('email');return false;">gkhoja@umich.edu</a> 
+            </li>
         </ul>
+
     </section>
+
+    <script>
+        function CopyToClipboard(id)
+        {
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        }
+    </script>
 
 </body>
 </html>

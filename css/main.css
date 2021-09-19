@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap");
 body, html {
   background: #0A0613;
   background-image: url("../images/Group 4.png");
+  background-attachment: fixed;
   margin: 0;
   font-family: 'Space Mono', monospace;
   scroll-behavior: smooth;
@@ -386,33 +388,44 @@ nav li a span:hover {
 .contact {
   color: white;
   background: rgba(10, 6, 19, 0.7);
-}
-
-.contact .contact-text, .contact .lnkdn {
+  padding: 2em;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  margin-bottom: 10em;
+}
+
+.contact .contact-text {
+  font-size: 7em;
+  text-align: center;
+}
+
+.contact ul {
+  display: block;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+}
+
+.contact ul span:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact ul li {
+  margin-top: 2em;
+  font-size: 4em;
+}
+
+.contact .email-text {
+  font-family: 'Archivo', sans-serif;
 }
 
 .contact a {
   text-decoration: none;
   color: white;
-}
-
-.contact h1 {
-  font-size: 3.2em;
-}
-
-.contact ul {
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: -6em;
-  list-style-type: none;
-  text-align: center;
-}
-
-.contact ul li {
-  padding: 2.5em;
-  font-size: 2.7em;
 }
 /*# sourceMappingURL=main.css.map */
