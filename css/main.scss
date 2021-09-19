@@ -7,7 +7,6 @@ body, html {
     margin: 0;
     font-family: 'Space Mono', monospace;
     scroll-behavior: smooth;
-    
 
 }
 
@@ -58,6 +57,7 @@ section {
             background: #0A0613;
         }
     }
+
 }
 
 nav {
@@ -183,9 +183,12 @@ nav {
     background: rgba(10, 6, 19, 0.7);
     color: white;
     text-align: justify;
+    user-select: none;
 
     .brief-about {
         font-size: 3em;
+        margin-bottom: -1.5em;
+        margin-top: 3.3em;
     }
 
     .brief-box {
@@ -195,19 +198,34 @@ nav {
         font-size: 1.4em;
     }
 
+    
+    .self-image {
+        opacity: 0.96;
+    }
+
     .vienna {
         background: #2d114f;
         margin-top: 8em;
         display: flex;
+        text-align: justify;
         
         .podium {
             width: 700px;
             height: auto;
         }
 
-        p {
-            margin-left: 3em;
-            margin-right: 3em;
+        h2 {
+            font-size: 1.8em;
+        }
+
+        h2, ul {
+            margin-left: 1em;
+        }
+
+        ul {
+            li {
+                margin-top: 2em;
+            }
         }
     }
 
@@ -215,13 +233,21 @@ nav {
 
         margin-top: 8em;
         display: flex;
+        align-items: center;
+        justify-content: center;
 
         .kgsp-logo {
             width: 500px;
             height: auto;
         }
 
+        h2 {
+            font-size: 2em;
+        }
+
         p {
+            margin-top: -1em;
+            font-size: 1.5em;
             margin-right: 3em;
         }
     }
@@ -236,9 +262,20 @@ nav {
             height: auto;
         }
 
-        p {
-            margin-left: 3em;
-            margin-right: 3em;
+        h2 {
+            font-size: 1.6em;
+        }
+
+        h2, ul {
+            margin-left: 1em;
+        }
+
+        ul {
+            margin-top: -1em;
+            li {
+                font-size: 1.2em;
+                margin-top: 2.4em;
+            }
         }
     }
 
@@ -247,43 +284,92 @@ nav {
         margin-top: 8em;
         display: flex;
 
+
         .gsdc-p {
             width: 750px;
             height: auto;
+            margin-left: 7em;
         }
 
-        p {
-            margin-right: 3em;
+
+        h2 {
+            font-size: 1.8em;
         }
+
+        .gsdc-box {
+            margin-top: -3em;
+        }
+
+        ul {
+            margin-top: -1em;
+            li {
+                font-size: 1.3em;
+                margin-top: 2.4em;
+            }
+        }
+
+
     }
 
     .mhackers {
         background: #2d114f;
         margin-top: 8em;
-        display: flex;
+        display: flex;;
 
         .mh-p {
-            width: 750px;
+            width: 450px;
             height: auto;
         }
 
         h2 {
-            margin-left: 2.5em;
-            margin-right: 3em;
+            font-size: 1.8em;
+        }
+
+        h2, ul {
+            margin-left: 1em;
         }
 
         ul {
-
-            margin-top: -2em;
-
+            margin-top: -2.5em;
+            margin-left: 2em;
+            padding: 1em;
             li {
+                font-size: 1.3em;
                 margin-top: 2em;
             }
-            display: inline-block;
-            margin-left: 3em;
         }
     }
 
 }    
+
+// CONTACT SECTION
+
+.contact {
+    color: white;
+
+    .contact-text, .lnkdn {
+        user-select: none;
+    }
+
+    a {
+        text-decoration: none;
+        color:white;
+    }
+
+    h1 {
+        font-size: 3.2em;
+    }
+
+    ul {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: -6em;
+        list-style-type: none;
+        text-align: center;
+        li {
+            padding: 2.5em;
+            font-size: 2.7em;
+        }
+    }
+}
 
 
