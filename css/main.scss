@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+body, html {
+
+    background: #0A0613;
+    background-image: url("../images/Group 4.png");
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+    scroll-behavior: smooth;
+    
+
+}
+
+section {
+    padding: 5em;
+}
+
+// MAIN BOX - SETTINGS - ANIMATION
+.main_box {
+    animation: cssAnimation linear 2s;
+    opacity: 1; 
+    margin: 0;
+    margin-top: 9em;
+    padding: 1em;
+    color: white;
+    text-align: center;
+
+    @keyframes cssAnimation {
+        0% 
+        {
+            opacity: 0;
+        }
+        25% 
+        {
+            opacity: 0;
+        }
+        50% 
+        {
+            opacity: 0.5;
+        }
+        75% 
+        {
+            opacity: 0.75;
+        }
+        100% 
+        {
+            opacity: 1;
+        }
+      }
+
+    .head {
+        cursor: default;
+        font-size: 3.5em;
+    }
+
+    .name {
+        span {
+            background: #0A0613;
+        }
+    }
+}
+
+nav {
+    color: white;
+    display: block;
+
+    ul {
+        list-style-type: none;
+        margin-top: -3em;
+    }
+
+    li {
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 3em;
+            display: block;
+            padding: .3em;
+            cursor: default;
+
+            span {
+                display: inline-block;
+                background: #0A0613;
+                width: 200px;
+            }
+
+            span:hover {
+                cursor: pointer;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+// SHOOTING STARS ANIMATION AND SECTION
+.stars {
+    span {
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        width: 2px;
+        height: 2px;
+        border-radius: 5em;
+        box-shadow: 0 0 0 2px;
+        background: white;
+        animation: animate 5s linear infinite;
+        opacity: 0%;
+    }
+
+    span::before {
+        content: '';
+        position: absolute;
+        top: 10%;
+        width: 200px;
+        height: 0.5px;
+        background: linear-gradient(90deg, #fff, transparent);
+    }
+
+    @keyframes animate 
+    {
+        0% 
+        {
+            transform: rotate(340deg) translateX(0);
+            opacity: 25%;
+        }
+
+        15% 
+        {
+            opacity: 100%;
+        }
+
+        30% 
+        {
+            opacity: 60%;
+        }
+
+        35% 
+        {
+            transform: rotate(340deg) translateX(-1000px);
+            opacity: 0%;
+        }
+
+        100% 
+        {
+            transform: rotate(340deg) translateX(-1000px);
+            opacity: 0%;
+        }
+        
+    }
+
+    span:nth-child(1) {
+        left: 20%;
+        animation-delay: 1.3s;
+    }
+
+    span:nth-child(2) {
+        left: 30%;
+        top: 20%;
+        animation-delay: 4s;
+    }
+
+    span:nth-child(3) {
+        left: 30%;
+        top: 60%;
+        animation-delay: 2.7s;
+    }
+
+    span:nth-child(5) {
+        left: 70%;
+        top: 50%;
+        animation-delay: 6s;
+    } 
+
+    span:nth-child(6) {
+        left: 10%;
+        top: 10%;
+        animation-delay: 0.7s;
+    } 
+
+}
+
+.About {
+    background: rgba(10, 6, 19, 0.7);
+    color: white;
+    text-align: justify;
+
+    .brief-about {
+        font-size: 3em;
+    }
+
+    .brief-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4em;
+    }
+
+    .vienna {
+        background: #2d114f;
+        margin-top: 8em;
+        display: flex;
+        
+        .podium {
+            width: 700px;
+            height: auto;
+        }
+
+        p {
+            margin-left: 3em;
+            margin-right: 3em;
+        }
+    }
+
+    .kgsp {
+
+        margin-top: 8em;
+        display: flex;
+
+        .kgsp-logo {
+            width: 500px;
+            height: auto;
+        }
+
+        p {
+            margin-right: 3em;
+        }
+    }
+
+    .saudi-club {
+        background: #2d114f;
+        margin-top: 8em;
+        display: flex;
+
+        .s-c {
+            width: 550px;
+            height: auto;
+        }
+
+        p {
+            margin-left: 3em;
+            margin-right: 3em;
+        }
+    }
+
+    .GSDC {
+
+        margin-top: 8em;
+        display: flex;
+
+        .gsdc-p {
+            width: 750px;
+            height: auto;
+        }
+
+        p {
+            margin-right: 3em;
+        }
+    }
+
+    .mhackers {
+        background: #2d114f;
+        margin-top: 8em;
+        display: flex;
+
+        .mh-p {
+            width: 750px;
+            height: auto;
+        }
+
+        h2 {
+            margin-left: 2.5em;
+            margin-right: 3em;
+        }
+
+        ul {
+
+            margin-top: -2em;
+
+            li {
+                margin-top: 2em;
+            }
+            display: inline-block;
+            margin-left: 3em;
+        }
+    }
+
+}    
+
+
