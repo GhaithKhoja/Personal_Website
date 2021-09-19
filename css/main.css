@@ -385,6 +385,7 @@ nav li a span:hover {
 
 .contact {
   color: white;
+  background: rgba(10, 6, 19, 0.7);
 }
 
 .contact .contact-text, .contact .lnkdn {
