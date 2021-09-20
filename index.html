@@ -43,10 +43,11 @@
         <div class="brief-disc">
             <h1 class="brief-about">About:</h1>
             <div class="brief-box">
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
                 <img class="self-image" src="images/haha.png" alt="Photo of a Handsome Man">
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
             </div>
         </div>
 
@@ -57,9 +58,9 @@
                 <ul>
                     <li>Progammed and optimized a humanoid robot to autonomously mimic human running and win a 2-meter race </li>
                     <li>Competed with 200+ particpants from more than 20 countries</li>
-                    <li>Most particpants were sponsered by companies and were completing university education</li>
-                    <li>Me and my team sponsered ourselves and developed our robot in our local high school labratory</li>
-                    <li>Recieved awards from the Saudi Education Director and Jeddah's Mayor for the achievement</li>
+                    <li class="hide1">Most particpants were sponsered by companies and were completing university education</li>
+                    <li class="hide2">Me and my team sponsered ourselves and developed our robot in our local high school labratory</li>
+                    <li class="hide3">Recieved awards from the Saudi Education Director and Jeddah's Mayor for the achievement</li>
                     <li>Founded a robotics club in my home school to educate other students about autnomous robots</li>
             </div>
         </div>
@@ -79,8 +80,8 @@
                 <ul>
                     <li>Oversee the inner workings of a university club with 45 active memebers</li>
                     <li>Organize social events that Help increase the bond between participating club memebers</li>
-                    <li>Organize networking events between the Saudi Club and other entities in the University</li>
-                    <li>Provide counsling and tutoring services to younger Saudi students</li>
+                    <li class="hide4">Organize networking events between the Saudi Club and other entities in the University</li>
+                    <li class="hide5">Provide counsling and tutoring services to younger Saudi students</li>
                     <li>Help Saudi students adapt to living and studying in the U.S</li>
             </div>
         </div>
@@ -112,27 +113,23 @@
     </section>
 
     <section class="contact">
-        <h1 class="contact-text">Contact</h1>
+        <h1 class="contact-text" id="contact-section" >Contact</h1>
         <ul>
             <li>
-                <a title="Click to Go to Linkedin" class="lnkdn" id="contact-section" href="https://www.linkedin.com/in/ghaith-khoja/"><span>Linkedin</span></a>
+                <a title="Click to Go to Linkedin" class="lnkdn" href="https://www.linkedin.com/in/ghaith-khoja/"><span>Linkedin</span></a>
             </li>
             <li> 
-                <a title="Click to Copy to Clipboard" class="email-text" id="email" href="#" onclick="CopyToClipboard('email');return false;">gkhoja@umich.edu</a> 
+                <a title="Click to Copy to Clipboard" class="email-text" href="#" onclick="CopyToClipboard();return false;"><span>gkhoja@umich.edu</span></a> 
             </li>
         </ul>
 
     </section>
 
     <script>
-        function CopyToClipboard(id)
+        function CopyToClipboard()
         {
-        var r = document.createRange();
-        r.selectNode(document.getElementById(id));
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(r);
-        document.execCommand('copy');
-        window.getSelection().removeAllRanges();
+        navigator.clipboard.writeText("gkhoja@umich.edu")
+        alert("Copied email address to clipboard")
         }
     </script>
 

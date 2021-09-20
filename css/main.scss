@@ -1,388 +1,766 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
 
-body, html {
 
-    background: #0A0613;
-    background-image: url("../images/Group 4.png");
-    // Fixed or scroll better?
-    background-attachment: fixed;
-    margin: 0;
-    font-family: 'Space Mono', monospace;
-    scroll-behavior: smooth;
+@media screen and (min-width: 1200.1px) {
+    body, html {
 
-}
+        background: #0A0613;
+        background-image: url("../images/Group 4.png");
+        // Fixed or scroll better?
+        background-attachment: fixed;
+        margin: 0;
+        font-family: 'Space Mono', monospace;
+        scroll-behavior: smooth;
 
-section {
-    padding: 5em;
-}
-
-// MAIN BOX - SETTINGS - ANIMATION
-.main_box {
-    animation: cssAnimation linear 2s;
-    opacity: 1; 
-    margin: 0;
-    margin-top: 9em;
-    padding: 1em;
-    color: white;
-    text-align: center;
-
-    @keyframes cssAnimation {
-        0% 
-        {
-            opacity: 0;
-        }
-        25% 
-        {
-            opacity: 0;
-        }
-        50% 
-        {
-            opacity: 0.5;
-        }
-        75% 
-        {
-            opacity: 0.75;
-        }
-        100% 
-        {
-            opacity: 1;
-        }
-      }
-
-    .head {
-        cursor: default;
-        font-size: 3.5em;
     }
 
-    .name {
-        span {
-            background: #0A0613;
+    section {
+        padding: 5em;
+    }
+
+    // MAIN BOX - SETTINGS - ANIMATION
+    .main_box {
+        animation: cssAnimation linear 2s;
+        opacity: 1; 
+        margin: 0;
+        margin-top: 9em;
+        padding: 1em;
+        color: white;
+        text-align: center;
+
+        @keyframes cssAnimation {
+            0% 
+            {
+                opacity: 0;
+            }
+            25% 
+            {
+                opacity: 0;
+            }
+            50% 
+            {
+                opacity: 0.5;
+            }
+            75% 
+            {
+                opacity: 0.75;
+            }
+            100% 
+            {
+                opacity: 1;
+            }
         }
-    }
 
-}
-
-nav {
-    color: white;
-    display: block;
-
-    ul {
-        list-style-type: none;
-        margin-top: -3em;
-    }
-
-    li {
-        a {
-            color: white;
-            text-decoration: none;
-            font-size: 3em;
-            display: block;
-            padding: .3em;
+        .head {
             cursor: default;
+            font-size: 3.5em;
+        }
 
+        .name {
             span {
-                display: inline-block;
                 background: #0A0613;
-                width: 200px;
+            }
+        }
+
+    }
+
+    nav {
+        color: white;
+        display: block;
+
+        ul {
+            list-style-type: none;
+            margin-top: -3em;
+        }
+
+        li {
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 3em;
+                display: block;
+                padding: .3em;
+                cursor: default;
+
+                span {
+                    display: inline-block;
+                    background: #0A0613;
+                    width: 200px;
+                }
+
+                span:hover {
+                    cursor: pointer;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    // SHOOTING STARS ANIMATION AND SECTION
+    .stars {
+        span {
+            position: absolute;
+            top: 50%;
+            left: 90%;
+            width: 2px;
+            height: 2px;
+            border-radius: 5em;
+            box-shadow: 0 0 0 2px;
+            background: white;
+            animation: animate 5s linear infinite;
+            opacity: 0%;
+        }
+
+        span::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            width: 200px;
+            height: 0.5px;
+            background: linear-gradient(90deg, #fff, transparent);
+        }
+
+        @keyframes animate 
+        {
+            0% 
+            {
+                transform: rotate(340deg) translateX(0);
+                opacity: 25%;
             }
 
+            15% 
+            {
+                opacity: 100%;
+            }
+
+            30% 
+            {
+                opacity: 60%;
+            }
+
+            35% 
+            {
+                transform: rotate(340deg) translateX(-1000px);
+                opacity: 0%;
+            }
+
+            100% 
+            {
+                transform: rotate(340deg) translateX(-1000px);
+                opacity: 0%;
+            }
+            
+        }
+
+        span:nth-child(1) {
+            left: 20%;
+            animation-delay: 1.3s;
+        }
+
+        span:nth-child(2) {
+            left: 30%;
+            top: 20%;
+            animation-delay: 4s;
+        }
+
+        span:nth-child(3) {
+            left: 30%;
+            top: 60%;
+            animation-delay: 2.7s;
+        }
+
+        span:nth-child(5) {
+            left: 70%;
+            top: 50%;
+            animation-delay: 6s;
+        } 
+
+        span:nth-child(6) {
+            left: 10%;
+            top: 10%;
+            animation-delay: 0.7s;
+        } 
+
+    }
+
+    .About {
+        background: rgba(10, 6, 19, 0.7);
+        color: white;
+        text-align: justify;
+        user-select: none;
+
+        .brief-disc {
+            margin-bottom: 18em;
+        }
+
+        .brief-about {
+            font-size: 3em;
+            margin-top: 3.3em;
+            display: none;
+        }
+
+        .brief-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4em;
+        }
+
+        
+        .self-image {
+            opacity: 0.96;
+        }
+
+        .vienna {
+            border-radius: 2em;
+            background: #2d114f;
+            margin-top: 8em;
+            display: flex;
+            text-align: justify;
+            
+            .podium {
+                max-width: 700px;
+                border-radius: 2em 0 0 2em;
+                height: auto;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            h2, ul {
+                margin-left: 1em;
+            }
+
+            ul {
+                li {
+                    margin-top: 2em;
+                }
+            }
+        }
+
+        .kgsp {
+            margin-top: 8em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .kgsp-logo {
+                max-width: 500px;
+                height: auto;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            p {
+                margin-top: -1em;
+                font-size: 1.5em;
+                margin-right: 3em;
+            }
+        }
+
+        .saudi-club {
+            background: #2d114f;
+            margin-top: 8em;
+            display: flex;
+            border-radius: 2em;
+
+            .s-c {
+                width: 550px;
+                height: auto;
+                border-radius: 2em 0 0 2em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            h2, ul {
+                margin-left: 1em;
+            }
+
+            ul {
+                margin-top: -1em;
+                li {
+                    font-size: 1.2em;
+                    margin-top: 2.4em;
+                }
+            }
+        }
+
+        .GSDC {
+
+            margin-top: 8em;
+            display: flex;
+
+
+            .gsdc-p {
+                width: 750px;
+                height: auto;
+                margin-left: 7em;
+            }
+
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .gsdc-box {
+                margin-top: -3em;
+            }
+
+            ul {
+                margin-top: -1em;
+                li {
+                    font-size: 1.3em;
+                    margin-top: 2.4em;
+                }
+            }
+
+
+        }
+
+        .mhackers {
+            background: #2d114f;
+            margin-top: 8em;
+            display: flex;
+            border-radius: 2em;
+
+            .mh-p {
+                width: 450px;
+                height: auto;
+                border-radius: 2em 0 0 2em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            h2, ul {
+                margin-left: 1em;
+            }
+
+            ul {
+                margin-top: -2.5em;
+                margin-left: 2em;
+                padding: 1em;
+                li {
+                    font-size: 1.3em;
+                    margin-top: 2em;
+                }
+            }
+        }
+
+    }    
+
+    // CONTACT SECTION
+
+    .contact {
+        color: white;
+        background: rgba(10, 6, 19, 0.7);
+        padding: 2em;
+        user-select: none;
+        margin-bottom: 10em;
+
+        .contact-text {
+            font-size: 7em;
+            text-align: center;
+        }
+        ul {
             span:hover {
                 cursor: pointer;
                 font-weight: bold;
             }
+            display: block;
+            text-align: center;
+            justify-content: space-between;
+            list-style-type: none;
+            li {
+                margin-top: 2em;
+                font-size: 4em;
+
+            }
         }
+
+        .email-text {
+            font-family: 'Archivo', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color:white;
+        }
+
     }
 }
 
-// SHOOTING STARS ANIMATION AND SECTION
+
+
+// PHONE SECTION
+
+@media only screen and (max-width: 1200px) {
+    body, html {
+        background: #0A0613; //#0A0613
+        background-image: url("../images/Group 4.png");
+        background-attachment: fixed;
+        scroll-behavior: smooth;
+        margin: 0;
+        font-family: 'Space Mono', monospace;
+    }
+
+    // SHOOTING STARS ANIMATION AND SECTION
 .stars {
-    span {
-        position: absolute;
-        top: 50%;
-        left: 90%;
-        width: 2px;
-        height: 2px;
-        border-radius: 5em;
-        box-shadow: 0 0 0 2px;
-        background: white;
-        animation: animate 5s linear infinite;
-        opacity: 0%;
-    }
-
-    span::before {
-        content: '';
-        position: absolute;
-        top: 10%;
-        width: 200px;
-        height: 0.5px;
-        background: linear-gradient(90deg, #fff, transparent);
-    }
-
-    @keyframes animate 
-    {
-        0% 
-        {
-            transform: rotate(340deg) translateX(0);
-            opacity: 25%;
-        }
-
-        15% 
-        {
-            opacity: 100%;
-        }
-
-        30% 
-        {
-            opacity: 60%;
-        }
-
-        35% 
-        {
-            transform: rotate(340deg) translateX(-1000px);
+        span {
+            position: absolute;
+            top: 50%;
+            left: 90%;
+            width: 2px;
+            height: 2px;
+            border-radius: 5em;
+            box-shadow: 0 0 0 2px;
+            background: white;
+            animation: animate 5s linear infinite;
             opacity: 0%;
         }
 
-        100% 
+        span::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            width: 200px;
+            height: 0.5px;
+            background: linear-gradient(90deg, #fff, transparent);
+        }
+
+        @keyframes animate 
         {
-            transform: rotate(340deg) translateX(-1000px);
-            opacity: 0%;
-        }
-        
-    }
-
-    span:nth-child(1) {
-        left: 20%;
-        animation-delay: 1.3s;
-    }
-
-    span:nth-child(2) {
-        left: 30%;
-        top: 20%;
-        animation-delay: 4s;
-    }
-
-    span:nth-child(3) {
-        left: 30%;
-        top: 60%;
-        animation-delay: 2.7s;
-    }
-
-    span:nth-child(5) {
-        left: 70%;
-        top: 50%;
-        animation-delay: 6s;
-    } 
-
-    span:nth-child(6) {
-        left: 10%;
-        top: 10%;
-        animation-delay: 0.7s;
-    } 
-
-}
-
-.About {
-    background: rgba(10, 6, 19, 0.7);
-    color: white;
-    text-align: justify;
-    user-select: none;
-
-    .brief-about {
-        font-size: 3em;
-        margin-bottom: -1.5em;
-        margin-top: 3.3em;
-    }
-
-    .brief-box {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.4em;
-    }
-
-    
-    .self-image {
-        opacity: 0.96;
-    }
-
-    .vienna {
-        background: #2d114f;
-        margin-top: 8em;
-        display: flex;
-        text-align: justify;
-        
-        .podium {
-            width: 700px;
-            height: auto;
-        }
-
-        h2 {
-            font-size: 1.8em;
-        }
-
-        h2, ul {
-            margin-left: 1em;
-        }
-
-        ul {
-            li {
-                margin-top: 2em;
+            0% 
+            {
+                transform: rotate(340deg) translateX(0);
+                opacity: 25%;
             }
-        }
-    }
 
-    .kgsp {
-
-        margin-top: 8em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .kgsp-logo {
-            width: 500px;
-            height: auto;
-        }
-
-        h2 {
-            font-size: 2em;
-        }
-
-        p {
-            margin-top: -1em;
-            font-size: 1.5em;
-            margin-right: 3em;
-        }
-    }
-
-    .saudi-club {
-        background: #2d114f;
-        margin-top: 8em;
-        display: flex;
-
-        .s-c {
-            width: 550px;
-            height: auto;
-        }
-
-        h2 {
-            font-size: 1.6em;
-        }
-
-        h2, ul {
-            margin-left: 1em;
-        }
-
-        ul {
-            margin-top: -1em;
-            li {
-                font-size: 1.2em;
-                margin-top: 2.4em;
+            15% 
+            {
+                opacity: 100%;
             }
-        }
-    }
 
-    .GSDC {
-
-        margin-top: 8em;
-        display: flex;
-
-
-        .gsdc-p {
-            width: 750px;
-            height: auto;
-            margin-left: 7em;
-        }
-
-
-        h2 {
-            font-size: 1.8em;
-        }
-
-        .gsdc-box {
-            margin-top: -3em;
-        }
-
-        ul {
-            margin-top: -1em;
-            li {
-                font-size: 1.3em;
-                margin-top: 2.4em;
+            30% 
+            {
+                opacity: 60%;
             }
-        }
 
-
-    }
-
-    .mhackers {
-        background: #2d114f;
-        margin-top: 8em;
-        display: flex;;
-
-        .mh-p {
-            width: 450px;
-            height: auto;
-        }
-
-        h2 {
-            font-size: 1.8em;
-        }
-
-        h2, ul {
-            margin-left: 1em;
-        }
-
-        ul {
-            margin-top: -2.5em;
-            margin-left: 2em;
-            padding: 1em;
-            li {
-                font-size: 1.3em;
-                margin-top: 2em;
+            35% 
+            {
+                transform: rotate(340deg) translateX(-1000px);
+                opacity: 0%;
             }
+
+            100% 
+            {
+                transform: rotate(340deg) translateX(-1000px);
+                opacity: 0%;
+            }
+            
         }
+
+        span:nth-child(1) {
+            left: 20%;
+            animation-delay: 1.3s;
+        }
+
+        span:nth-child(2) {
+            left: 30%;
+            top: 20%;
+            animation-delay: 4s;
+        }
+
+        span:nth-child(3) {
+            left: 30%;
+            top: 60%;
+            animation-delay: 2.7s;
+        }
+
+        span:nth-child(5) {
+            left: 70%;
+            top: 50%;
+            animation-delay: 6s;
+        } 
+
+        span:nth-child(6) {
+            left: 10%;
+            top: 10%;
+            animation-delay: 0.7s;
+        } 
+
     }
 
-}    
+    section {
+        padding: 5em 2em;
+    }
 
-// CONTACT SECTION
-
-.contact {
-    color: white;
-    background: rgba(10, 6, 19, 0.7);
-    padding: 2em;
-    user-select: none;
-    margin-bottom: 10em;
-
-    .contact-text {
-        font-size: 7em;
+    .main_box {
+        margin-top: 7em;
+        color: white;
         text-align: center;
-    }
-    ul {
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-size: 2em;
+
+            li {
+                margin-top: 2.7em;
+            }
+
+        }
+
         span:hover {
             cursor: pointer;
             font-weight: bold;
         }
-        display: block;
-        text-align: center;
-        justify-content: space-between;
-        list-style-type: none;
-        li {
-            margin-top: 2em;
-            font-size: 4em;
 
+        .name {
+            font-size: 2.3em;
         }
     }
 
-    .email-text {
-        font-family: 'Archivo', sans-serif;
+    .About {
+        color: white;
+        margin-top: 10em;
+        .brief-box {
+
+            text-align: center;
+            justify-content: center;
+
+            .brief-about {
+                font-size: 2em;
+            }
+    
+            .self-image {
+                height: auto;
+                width: 70%;
+            }
+
+        }
+
+        .vienna {
+            background:#2d114f;
+            margin-top: 3em;
+            border-radius: 2em;
+            .podium {
+                padding: 2em;
+                margin: 0;
+                width: 80%;
+                height: auto;
+                border-radius: 3em;
+            }
+
+            .hide2 {
+                display: none;
+            }
+            .hide1 {
+                display: none;
+            }
+            .hide3 {
+                display: none;
+            }
+
+            .v-box {
+                margin-top: -3em;
+                padding: 1em;
+                h2 {
+                    font-size: 1em;
+                    text-align: center;
+                }
+
+                ul {
+
+                    li {
+                        justify-content: center;
+                        margin-top: 1em;
+                        font-size: 0.9em;
+                    }
+
+                }
+
+            }
+        }
+
+        .kgsp {
+            background: hsl(245, 12%, 25%);
+            border-radius: 2em;
+            text-align: center;
+
+            .kgsp-logo {
+                margin-top: -3em;
+                padding: 2em;
+                width: 80%;
+                height: auto;
+            }
+
+            .kgsp-box {
+                margin-top: 2em;
+                padding: 1em;
+                h2 {
+                    font-size: 1em;
+                }
+
+            }
+
+        }
+
+        .saudi-club {
+            background:#2d114f;
+            border-radius: 2em;
+            margin-top: 2em;
+            .s-c {
+                padding: 2em;
+                margin: 0;
+                width: 80%;
+                height: auto;
+                border-radius: 3em;
+            }
+
+            .hide4 {
+                display: none;
+            }
+            .hide5 {
+                display: none;
+            }
+
+            .sc-box {
+                margin-top: -3em;
+                padding: 1em;
+                h2 {
+                    font-size: 1em;
+                    text-align: center;
+                }
+
+                ul {
+
+                    li {
+                        justify-content: center;
+                        margin-top: 1em;
+                        font-size: 0.9em;
+                    }
+
+                }
+
+            }
+        }
+
+        .GSDC {
+            background: hsl(245, 12%, 25%);
+            border-radius: 2em;
+
+            .gsdc-p {
+                margin-top: -2em;
+                padding: 2em;
+                width: 80%;
+                height: auto;
+            }
+
+            .gsdc-box {
+                margin-top: 2em;
+                padding: 1em;
+                h2 {
+                    font-size: 1em;
+                    text-align: center;
+                }
+
+                ul {
+
+                    li {
+                        justify-content: center;
+                        margin-top: 1em;
+                        margin-left: -2em;
+                        font-size: 0.9em;
+                    }
+
+                }
+
+            }
+        }
+
+        .mhackers {
+            background:#2d114f;
+            border-radius: 2em;
+            margin-top: 2em;
+            .mh-p {
+                padding: 2em;
+                margin: 0;
+                width: 80%;
+                height: auto;
+                border-radius: 3em;
+            }
+
+            .mh-box {
+                margin-top: -3em;
+                padding: 1em;
+                h2 {
+                    font-size: 1em;
+                    text-align: center;
+                }
+
+                ul {
+
+                    li {
+                        justify-content: center;
+                        margin-top: 1em;
+                        font-size: 0.9em;
+                    }
+
+                }
+
+            }
+        }
+
     }
 
-    a {
-        text-decoration: none;
-        color:white;
-    }
+    .contact {
+        color: white;
+        background: rgba(10, 6, 19, 0.7);
+        text-align: center;
+        margin-bottom: 15em;
 
+        .contact-text {
+            font-size: 2.3em;
+        }
+
+        
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-size: 1.6em;
+
+            .lnkdn {
+                user-select: none;
+            }
+
+            li {
+                margin-top: 4em;
+            }
+
+        }
+    
+        .email-text {
+            font-family: 'Archivo', sans-serif;
+        }
+    
+    }
 }
-
-
