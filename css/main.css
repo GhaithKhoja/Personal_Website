@@ -17,7 +17,7 @@
             animation: cssAnimation linear 2s;
     opacity: 1;
     margin: 0;
-    margin-top: 9em;
+    margin-top: 8em;
     padding: 1em;
     color: white;
     text-align: center;
@@ -58,7 +58,7 @@
   }
   .main_box .head {
     cursor: default;
-    font-size: 3.5em;
+    font-size: 3vw;
   }
   .main_box .name span {
     background: #0A0613;
@@ -74,7 +74,7 @@
   nav li a {
     color: white;
     text-decoration: none;
-    font-size: 3em;
+    font-size: 2.8em;
     display: block;
     padding: .3em;
     cursor: default;
@@ -198,11 +198,6 @@
   .About .brief-disc {
     margin-bottom: 18em;
   }
-  .About .brief-about {
-    font-size: 3em;
-    margin-top: 3.3em;
-    display: none;
-  }
   .About .brief-box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -213,7 +208,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    font-size: 1.4em;
+    font-size: 1.5vw;
   }
   .About .self-image {
     opacity: 0.96;
@@ -225,20 +220,30 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    text-align: justify;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   .About .vienna .podium {
-    max-width: 700px;
+    width: 45%;
     border-radius: 2em 0 0 2em;
     height: auto;
   }
-  .About .vienna h2 {
-    font-size: 1.8em;
-  }
-  .About .vienna h2, .About .vienna ul {
+  .About .vienna .v-box {
+    padding-right: 1em;
     margin-left: 1em;
   }
-  .About .vienna ul li {
+  .About .vienna .v-box h2 {
+    font-size: 1.3vw;
+  }
+  .About .vienna .v-box ul {
+    font-size: 0.85vw;
+  }
+  .About .vienna .v-box ul li {
     margin-top: 2em;
   }
   .About .kgsp {
@@ -249,71 +254,82 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   .About .kgsp .kgsp-logo {
-    max-width: 500px;
+    width: 25%;
     height: auto;
+    margin-left: 10em;
+    margin-right: 3em;
   }
   .About .kgsp h2 {
-    font-size: 2em;
+    font-size: 1.5vw;
   }
   .About .kgsp p {
     margin-top: -1em;
-    font-size: 1.5em;
+    font-size: 1vw;
     margin-right: 3em;
   }
   .About .saudi-club {
     background: #2d114f;
     margin-top: 8em;
+    border-radius: 2em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    border-radius: 2em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   .About .saudi-club .s-c {
-    width: 550px;
+    width: 29%;
     height: auto;
     border-radius: 2em 0 0 2em;
   }
-  .About .saudi-club h2 {
-    font-size: 1.6em;
+  .About .saudi-club .sc-box {
+    margin-left: 2em;
   }
-  .About .saudi-club h2, .About .saudi-club ul {
-    margin-left: 1em;
+  .About .saudi-club .sc-box h2 {
+    font-size: 1.3vw;
   }
-  .About .saudi-club ul {
-    margin-top: -1em;
+  .About .saudi-club .sc-box ul {
+    font-size: 0.85vw;
   }
-  .About .saudi-club ul li {
-    font-size: 1.2em;
-    margin-top: 2.4em;
+  .About .saudi-club .sc-box ul li {
+    margin-top: 2.3em;
   }
   .About .GSDC {
     margin-top: 8em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   .About .GSDC .gsdc-p {
-    width: 750px;
+    width: 50%;
     height: auto;
-    margin-left: 7em;
+    margin-left: 4em;
   }
   .About .GSDC h2 {
-    font-size: 1.8em;
+    font-size: 1.3vw;
   }
-  .About .GSDC .gsdc-box {
-    margin-top: -3em;
+  .About .GSDC .gsdc-box h2 {
+    font-size: 1.3vw;
   }
-  .About .GSDC ul {
-    margin-top: -1em;
+  .About .GSDC .gsdc-box ul {
+    font-size: 1vw;
   }
-  .About .GSDC ul li {
-    font-size: 1.3em;
-    margin-top: 2.4em;
+  .About .GSDC .gsdc-box ul li {
+    margin-top: 1.5em;
   }
   .About .mhackers {
     background: #2d114f;
@@ -321,27 +337,31 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
     border-radius: 2em;
   }
   .About .mhackers .mh-p {
-    width: 450px;
+    width: 30%;
     height: auto;
     border-radius: 2em 0 0 2em;
   }
-  .About .mhackers h2 {
-    font-size: 1.8em;
-  }
-  .About .mhackers h2, .About .mhackers ul {
-    margin-left: 1em;
-  }
-  .About .mhackers ul {
-    margin-top: -2.5em;
+  .About .mhackers .mh-box {
     margin-left: 2em;
-    padding: 1em;
   }
-  .About .mhackers ul li {
-    font-size: 1.3em;
-    margin-top: 2em;
+  .About .mhackers .mh-box h2 {
+    font-size: 1.4vw;
+  }
+  .About .mhackers .mh-box ul {
+    font-size: 0.9vw;
+  }
+  .About .mhackers .mh-box ul li {
+    margin-top: 2.3em;
   }
   .contact {
     color: white;
@@ -354,7 +374,7 @@
     margin-bottom: 10em;
   }
   .contact .contact-text {
-    font-size: 7em;
+    font-size: 4.5vw;
     text-align: center;
   }
   .contact ul {
@@ -371,7 +391,7 @@
   }
   .contact ul li {
     margin-top: 2em;
-    font-size: 4em;
+    font-size: 3.5vw;
   }
   .contact .email-text {
     font-family: 'Archivo', sans-serif;
@@ -496,6 +516,42 @@
     margin-top: 7em;
     color: white;
     text-align: center;
+    -webkit-animation: cssAnimation linear 2s;
+            animation: cssAnimation linear 2s;
+  }
+  @-webkit-keyframes cssAnimation {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes cssAnimation {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   .main_box a {
     color: white;
