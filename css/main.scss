@@ -435,38 +435,6 @@
             background: linear-gradient(90deg, #fff, transparent);
         }
 
-        @keyframes animate 
-        {
-            0% 
-            {
-                transform: rotate(340deg) translateX(0);
-                opacity: 25%;
-            }
-
-            15% 
-            {
-                opacity: 100%;
-            }
-
-            30% 
-            {
-                opacity: 60%;
-            }
-
-            35% 
-            {
-                transform: rotate(340deg) translateX(-1000px);
-                opacity: 0%;
-            }
-
-            100% 
-            {
-                transform: rotate(340deg) translateX(-1000px);
-                opacity: 0%;
-            }
-            
-        }
-
         span:nth-child(1) {
             left: 20%;
             animation-delay: 1.3s;
@@ -506,6 +474,8 @@
         margin-top: 7em;
         color: white;
         text-align: center;
+
+
         a{
             color: white;
             text-decoration: none;
@@ -728,7 +698,6 @@
 
     .contact {
         color: white;
-        background: rgba(10, 6, 19, 0.7);
         text-align: center;
         margin-bottom: 15em;
 
