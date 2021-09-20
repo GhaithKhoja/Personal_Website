@@ -426,6 +426,38 @@
             opacity: 0%;
         }
 
+        @keyframes animate 
+        {
+            0% 
+            {
+                transform: rotate(340deg) translateX(0);
+                opacity: 25%;
+            }
+
+            15% 
+            {
+                opacity: 100%;
+            }
+
+            30% 
+            {
+                opacity: 60%;
+            }
+
+            35% 
+            {
+                transform: rotate(340deg) translateX(-1000px);
+                opacity: 0%;
+            }
+
+            100% 
+            {
+                transform: rotate(340deg) translateX(-1000px);
+                opacity: 0%;
+            }
+            
+        }
+
         span::before {
             content: '';
             position: absolute;
@@ -505,15 +537,10 @@
 
     .About {
         color: white;
-        margin-top: 10em;
         .brief-box {
 
             text-align: center;
             justify-content: center;
-
-            .brief-about {
-                font-size: 2em;
-            }
     
             .self-image {
                 height: auto;

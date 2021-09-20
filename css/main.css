@@ -405,6 +405,52 @@
             animation: animate 5s linear infinite;
     opacity: 0%;
   }
+  @-webkit-keyframes animate {
+    0% {
+      -webkit-transform: rotate(340deg) translateX(0);
+              transform: rotate(340deg) translateX(0);
+      opacity: 25%;
+    }
+    15% {
+      opacity: 100%;
+    }
+    30% {
+      opacity: 60%;
+    }
+    35% {
+      -webkit-transform: rotate(340deg) translateX(-1000px);
+              transform: rotate(340deg) translateX(-1000px);
+      opacity: 0%;
+    }
+    100% {
+      -webkit-transform: rotate(340deg) translateX(-1000px);
+              transform: rotate(340deg) translateX(-1000px);
+      opacity: 0%;
+    }
+  }
+  @keyframes animate {
+    0% {
+      -webkit-transform: rotate(340deg) translateX(0);
+              transform: rotate(340deg) translateX(0);
+      opacity: 25%;
+    }
+    15% {
+      opacity: 100%;
+    }
+    30% {
+      opacity: 60%;
+    }
+    35% {
+      -webkit-transform: rotate(340deg) translateX(-1000px);
+              transform: rotate(340deg) translateX(-1000px);
+      opacity: 0%;
+    }
+    100% {
+      -webkit-transform: rotate(340deg) translateX(-1000px);
+              transform: rotate(340deg) translateX(-1000px);
+      opacity: 0%;
+    }
+  }
   .stars span::before {
     content: '';
     position: absolute;
@@ -473,16 +519,12 @@
   }
   .About {
     color: white;
-    margin-top: 10em;
   }
   .About .brief-box {
     text-align: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .About .brief-box .brief-about {
-    font-size: 2em;
   }
   .About .brief-box .self-image {
     height: auto;
