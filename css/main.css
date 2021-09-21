@@ -9,6 +9,9 @@
     font-family: 'Space Mono', monospace;
     scroll-behavior: smooth;
   }
+  .hyper {
+    color: white;
+  }
   section {
     padding: 5em;
   }
@@ -186,16 +189,50 @@
     -webkit-animation-delay: 0.7s;
             animation-delay: 0.7s;
   }
+  .stars .amognus {
+    position: absolute;
+    width: 4%;
+    height: auto;
+    top: 10%;
+    left: 80%;
+    opacity: 0;
+    -webkit-animation: animateamog 10s linear 10s;
+            animation: animateamog 10s linear 10s;
+  }
+  @-webkit-keyframes animateamog {
+    0% {
+      -webkit-transform: translateX(300px) rotate(-90deg);
+              transform: translateX(300px) rotate(-90deg);
+      opacity: 75%;
+    }
+    100% {
+      -webkit-transform: translateX(-2000px) rotate(-350deg);
+              transform: translateX(-2000px) rotate(-350deg);
+      opacity: 75%;
+    }
+  }
+  @keyframes animateamog {
+    0% {
+      -webkit-transform: translateX(300px) rotate(-90deg);
+              transform: translateX(300px) rotate(-90deg);
+      opacity: 75%;
+    }
+    100% {
+      -webkit-transform: translateX(-2000px) rotate(-350deg);
+              transform: translateX(-2000px) rotate(-350deg);
+      opacity: 75%;
+    }
+  }
   .About {
     background: rgba(10, 6, 19, 0.7);
     color: white;
-    text-align: justify;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
   }
   .About .brief-disc {
+    line-height: 2;
     margin-bottom: 18em;
   }
   .About .brief-box {
@@ -229,19 +266,19 @@
             align-items: stretch;
   }
   .About .vienna .podium {
-    width: 45%;
+    width: 38%;
     border-radius: 2em 0 0 2em;
     height: auto;
   }
   .About .vienna .v-box {
-    padding-right: 1em;
+    padding-right: 1.5em;
     margin-left: 1em;
   }
   .About .vienna .v-box h2 {
-    font-size: 1.3vw;
+    font-size: 1.4vw;
   }
   .About .vienna .v-box ul {
-    font-size: 0.85vw;
+    font-size: 0.9vw;
   }
   .About .vienna .v-box ul li {
     margin-top: 2em;
@@ -296,10 +333,10 @@
     font-size: 1.3vw;
   }
   .About .saudi-club .sc-box ul {
-    font-size: 0.85vw;
+    font-size: 1vw;
   }
   .About .saudi-club .sc-box ul li {
-    margin-top: 2.3em;
+    margin-top: 1.7em;
   }
   .About .GSDC {
     margin-top: 8em;
@@ -310,9 +347,7 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    text-align: left;
   }
   .About .GSDC .gsdc-p {
     width: 50%;
@@ -329,7 +364,7 @@
     font-size: 1vw;
   }
   .About .GSDC .gsdc-box ul li {
-    margin-top: 1.5em;
+    margin-top: 1em;
   }
   .About .mhackers {
     background: #2d114f;
@@ -358,15 +393,54 @@
     font-size: 1.4vw;
   }
   .About .mhackers .mh-box ul {
-    font-size: 0.9vw;
+    padding-right: 1em;
+    font-size: 1.02vw;
   }
   .About .mhackers .mh-box ul li {
-    margin-top: 2.3em;
+    margin-top: 2em;
+  }
+  .projects {
+    background: rgba(10, 6, 19, 0.7);
+    color: white;
+    text-align: center;
+    /*
+        .portfolio-item {
+            overflow: hidden;
+        }
+        */
+  }
+  .projects .work-text {
+    font-size: 4vw;
+  }
+  .projects .breif-projects {
+    font-size: 2vw;
+    margin-bottom: 3em;
+  }
+  .projects .portfolio {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .projects .portfolio img {
+    width: 80%;
+    height: auto;
+    border-radius: 10em;
+  }
+  .projects .portfolio-img {
+    -webkit-transition: opacity 250ms linear, -webkit-transform 750ms cubic-bezier(0.5, 0, 0.5, 1);
+    transition: opacity 250ms linear, -webkit-transform 750ms cubic-bezier(0.5, 0, 0.5, 1);
+    transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+    transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear, -webkit-transform 750ms cubic-bezier(0.5, 0, 0.5, 1);
+  }
+  .projects .portfolio-img:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: .8;
   }
   .contact {
     color: white;
     background: rgba(10, 6, 19, 0.7);
-    padding: 2em;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -380,10 +454,8 @@
   .contact ul {
     display: block;
     text-align: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     list-style-type: none;
+    margin-right: 2em;
   }
   .contact ul span:hover {
     cursor: pointer;

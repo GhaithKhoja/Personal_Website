@@ -15,6 +15,10 @@
 
     }
 
+    .hyper {
+        color: white;
+    }
+
     section {
         padding: 5em;
     }
@@ -97,7 +101,7 @@
         }
     }
 
-    // SHOOTING STARS ANIMATION AND SECTION
+    // SHOOTING STARS AND AMOGUS ANIMATION AND SECTION
     .stars {
         span {
             position: absolute;
@@ -182,15 +186,45 @@
             animation-delay: 0.7s;
         } 
 
+        .amognus {
+            position: absolute;
+            width: 4%;
+            height: auto;
+            top: 10%;
+            left: 80%;
+            opacity: 0;
+            animation: animateamog 10s linear 10s;
+            
+        }
+
+        @keyframes animateamog 
+        {
+            0% 
+            {
+                transform: translateX(300px) rotate(-90deg);
+                opacity: 75%;
+            }
+
+            100% 
+            {
+                transform: translateX(-2000px) rotate(-350deg);
+                opacity: 75%;
+            }
+
+            
+        }
+
+
+
     }
 
     .About {
         background: rgba(10, 6, 19, 0.7);
         color: white;
-        text-align: justify;
         user-select: none;
 
         .brief-disc {
+            line-height: 2;
             margin-bottom: 18em;
         }
 
@@ -215,21 +249,21 @@
             align-items: stretch;
             
             .podium {
-                width: 45%;
+                width: 38%;
                 border-radius: 2em 0 0 2em;
                 height: auto;
             }
 
             .v-box {
-                padding-right: 1em;
+                padding-right: 1.5em;
                 margin-left: 1em;
                 
                 h2 {
-                    font-size: 1.3vw;
+                    font-size: 1.4vw;
                 }
 
                 ul {
-                    font-size: 0.85vw;
+                    font-size: 0.9vw;
                     li {
                         margin-top: 2em;
                     }
@@ -284,20 +318,19 @@
                 }
 
                 ul {
-                    font-size: 0.85vw;
+                    font-size: 1vw;
                     li {
-                        margin-top: 2.3em;
+                        margin-top: 1.7em;
                     }
                 }
             }
         }
 
         .GSDC {
-
             margin-top: 8em;
             display: flex;
             flex-flow: row;
-            align-items: stretch;
+            text-align: left;
 
 
             .gsdc-p {
@@ -319,7 +352,7 @@
                 ul {
                     font-size: 1vw;
                     li {
-                        margin-top: 1.5em;
+                        margin-top: 1em;
                     }
                 }
             }
@@ -349,9 +382,10 @@
                 }
 
                 ul {
-                    font-size: 0.9vw;
+                    padding-right: 1em;
+                    font-size: 1.02vw;
                     li {
-                        margin-top: 2.3em;
+                        margin-top: 2em;
                     }
                 }
             }
@@ -360,12 +394,56 @@
 
     }    
 
+    // PROJECTS SECTION
+    .projects {
+        background: rgba(10, 6, 19, 0.7);
+        color: white;
+        text-align: center;
+
+        .work-text {
+            font-size: 4vw;
+        }
+
+        .breif-projects {
+            font-size: 2vw;
+            margin-bottom: 3em;
+        }
+
+        .portfolio {
+            img {
+                width: 80%;
+                height: auto;
+                border-radius: 10em;
+            }
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+        }
+
+        /*
+        .portfolio-item {
+            overflow: hidden;
+        }
+        */
+
+        .portfolio-img {
+            transition: 
+                transform 750ms cubic-bezier(.5,0,.5,1),
+                opacity 250ms linear;
+            ;
+        }
+
+        .portfolio-img:hover {
+            transform: scale(1.2);
+            opacity: .8;
+        }
+    }
+
+
     // CONTACT SECTION
 
     .contact {
         color: white;
         background: rgba(10, 6, 19, 0.7);
-        padding: 2em;
         user-select: none;
         margin-bottom: 10em;
 
@@ -380,8 +458,8 @@
             }
             display: block;
             text-align: center;
-            justify-content: space-between;
             list-style-type: none;
+            margin-right: 2em;
             li {
                 margin-top: 2em;
                 font-size: 3.5vw;
