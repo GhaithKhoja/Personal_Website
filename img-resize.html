@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resize Project</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/Icon awesome-space-shuttle.png">
+</head>
+<body>
+
+    <div class="a--img">
+            <div class="img-nav">
+        <a href="index.html"> <span>Home</span> </a>
+        <a href="index.html#about-section"> <span>About</span> </a>
+        <a href="index.html#projects-section"> <span>Projects</span> </a>
+        <a href="index.html#contact-section"> <span>Contact</span> </a>
+    </div>
+
+    <div class="test-img"></div>
+
+        <div class="img--disc">
+            <h2 class="img--topic">Image Resizing using seam carving (Image Retargeting)</h2>
+    
+            <div class="hyper">
+                <p>
+                    Seam carving is a technique for image resizing. Unlike rescaling, seam carving keeps the important details of an image and leaves it undistorted. It does this by evaluating the energy of each pixel in the image and from top to bottom, removing the connected pixels with the least calculated energies. The energy of each pixel is calculated by the squared difference between its pixel neighbors. 
+                </p>
+            </div>
+        </div>
+    
+        <div class="resize-main">
+            <div class="resize-box"> 
+                <img class="horse" src="/images/1.png" alt="">
+                <figcaption class="caption">Original Image: 479x382 Pixels</figcaption>
+            </div>
+            <div class="resize-box">
+                <img class="horse" src="/images/2.png" alt="">
+                <figcaption class="caption">Resized: 300x382 Pixels</figcaption>
+            </div>
+            <div class="resize-box">
+                <img class="horse" src="/images/3.png" alt="">
+                <figcaption class="caption">Resized: 400x250 Pixels</figcaption>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+</body>
+</html>    
