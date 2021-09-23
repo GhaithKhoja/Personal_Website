@@ -9,6 +9,9 @@
     font-family: 'Space Mono', monospace;
     scroll-behavior: smooth;
   }
+  .feat-img {
+    display: none;
+  }
   .a--img .img-nav {
     -webkit-animation: cssAnimation linear 1s;
             animation: cssAnimation linear 1s;
@@ -124,7 +127,7 @@
     margin-left: 7em;
   }
   .a--port .port--disc p {
-    text-align: justify;
+    text-align: center;
     -webkit-animation: cssAnimation linear 3s;
             animation: cssAnimation linear 3s;
     margin-right: 2em;
@@ -133,13 +136,12 @@
     color: white;
     font-size: 1.5vw;
   }
-  .a--port .port--disc .code-pics {
+  .a--port .port--disc img {
     -webkit-animation: cssAnimation linear 4s;
             animation: cssAnimation linear 4s;
-  }
-  .a--port .port--disc .code-pics img {
-    width: 90%;
+    width: 50%;
     height: auto;
+    margin-right: 7em;
   }
   .euchre-nav {
     -webkit-animation: cssAnimation linear 1s;
@@ -391,7 +393,7 @@
     -webkit-animation-delay: 0.7s;
             animation-delay: 0.7s;
   }
-  .stars .amognus {
+  .amognus {
     position: absolute;
     width: 4%;
     height: auto;
@@ -693,6 +695,9 @@
     scroll-behavior: smooth;
     margin: 0;
     font-family: 'Space Mono', monospace;
+  }
+  .feat-img {
+    display: none;
   }
   .projects {
     display: none;

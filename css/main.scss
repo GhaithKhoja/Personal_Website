@@ -15,6 +15,10 @@
 
     }
 
+    .feat-img {
+        display: none;
+    }
+
     .a--img {
 
         .img-nav {
@@ -109,7 +113,7 @@
             margin-left: 7em;
 
             p {
-                text-align: justify;
+                text-align: center;
                 animation: cssAnimation linear 3s;
                 margin-right: 2em;
                 flex-shrink: 10;
@@ -117,12 +121,11 @@
                 font-size: 1.5vw;
             }
 
-            .code-pics {
+            img {
                 animation: cssAnimation linear 4s;
-                img {
-                    width: 90%;
+                    width: 50%;
                     height: auto;
-                }
+                    margin-right: 7em;
             }
         }
 
@@ -355,36 +358,37 @@
             animation-delay: 0.7s;
         } 
 
-        .amognus {
-            position: absolute;
-            width: 4%;
-            height: auto;
-            top: 10%;
-            left: 80%;
-            opacity: 0;
-            animation: animateamog 10s linear 10s;
-            
-        }
 
-        @keyframes animateamog 
+
+    }
+
+    
+    .amognus {
+        position: absolute;
+        width: 4%;
+        height: auto;
+        top: 10%;
+        left: 80%;
+        opacity: 0;
+        animation: animateamog 10s linear 10s;
+        
+    }
+
+    @keyframes animateamog 
+    {
+        0% 
         {
-            0% 
-            {
-                transform: translateX(300px) rotate(-90deg);
-                opacity: 75%;
-            }
-
-            100% 
-            {
-                transform: translateX(-2000px) rotate(-350deg);
-                opacity: 75%;
-            }
-
-            
+            transform: translateX(300px) rotate(-90deg);
+            opacity: 75%;
         }
 
+        100% 
+        {
+            transform: translateX(-2000px) rotate(-350deg);
+            opacity: 75%;
+        }
 
-
+        
     }
 
     .About {
@@ -662,6 +666,10 @@
         scroll-behavior: smooth;
         margin: 0;
         font-family: 'Space Mono', monospace;
+    }
+
+    .feat-img {
+        display: none;
     }
 
     .projects {
